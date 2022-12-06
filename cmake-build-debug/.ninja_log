@@ -1,0 +1,11 @@
+# ninja log v5
+705	815	1670288519576137526	Test_Class	eb6916ef6a82ee6
+1	703	1670288519461076349	CMakeFiles/Test_Class.dir/TestClass.cpp.o	9e4e84e41370bbe5
+0	177	1670288518936053350	CMakeFiles/Test_Class.dir/main.cpp.o	a014fcf01c887b76
+1	699	1670288479898331867	CMakeFiles/csci570_finalProj.dir/TestClass.cpp.o	789a488f8b5756df
+701	791	1670288479994650577	csci570_finalProj	d1aad3c914d5463c
+0	122	1670288479323587794	CMakeFiles/csci570_finalProj.dir/main.cpp.o	27d340592022397e
+1	174	1670288746125919270	build.ninja	d51219bdb567ee8f
+1	286	1670288746433427001	CMakeFiles/Test_Class.dir/src/main.cpp.o	c143f8cf3cc3aedb
+1	828	1670288746973878786	CMakeFiles/Test_Class.dir/src/TestClass.cpp.o	26793aab0cc55463
+828	942	1670288747091163318	Test_Class	97f73ae3e36d098b

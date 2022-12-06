@@ -338,6 +338,18 @@
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake"
+		},
+		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -795,7 +807,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "csci570_finalProj"
+			"value" : "CSCI-570-FinalProject-Sequence-Alignment"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1076,6 +1088,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "CSCI-570-FinalProject-Sequence-Alignment_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug"
+		},
+		{
+			"name" : "CSCI-570-FinalProject-Sequence-Alignment_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "CSCI-570-FinalProject-Sequence-Alignment_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj"
 		},
 		{
 			"name" : "csci570_finalProj_BINARY_DIR",

@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.23)
-project(csci570_finalProj)
+project(CSCI-570-FinalProject-Sequence-Alignment)
 
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 include_directories(./src)
 
-add_executable(Test_Class ./src/main.cpp ./src/TestClass.cpp)
+add_executable(Basic_Test src/basic.cpp ./src/CSequenceAligner.cpp ./src/CUtils.cpp)

@@ -8,7 +8,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: csci570_finalProj
+# Project: CSCI-570-FinalProject-Sequence-Alignment
 # Configurations: Debug
 # =============================================================================
 
@@ -38,51 +38,59 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Test_Class
+# Object build statements for EXECUTABLE target Basic_Test
 
 
 #############################################
-# Order-only phony target for Test_Class
+# Order-only phony target for Basic_Test
 
-build cmake_object_order_depends_target_Test_Class: phony || CMakeFiles/Test_Class.dir
+build cmake_object_order_depends_target_Basic_Test: phony || CMakeFiles/Basic_Test.dir
 
-build CMakeFiles/Test_Class.dir/src/main.cpp.o: CXX_COMPILER__Test_Class_Debug /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/src/main.cpp || cmake_object_order_depends_target_Test_Class
-  DEP_FILE = CMakeFiles/Test_Class.dir/src/main.cpp.o.d
+build CMakeFiles/Basic_Test.dir/src/basic.cpp.o: CXX_COMPILER__Basic_Test_Debug /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/src/basic.cpp || cmake_object_order_depends_target_Basic_Test
+  DEP_FILE = CMakeFiles/Basic_Test.dir/src/basic.cpp.o.d
   FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14
   INCLUDES = -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/. -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/./src
-  OBJECT_DIR = CMakeFiles/Test_Class.dir
-  OBJECT_FILE_DIR = CMakeFiles/Test_Class.dir/src
+  OBJECT_DIR = CMakeFiles/Basic_Test.dir
+  OBJECT_FILE_DIR = CMakeFiles/Basic_Test.dir/src
 
-build CMakeFiles/Test_Class.dir/src/TestClass.cpp.o: CXX_COMPILER__Test_Class_Debug /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/src/TestClass.cpp || cmake_object_order_depends_target_Test_Class
-  DEP_FILE = CMakeFiles/Test_Class.dir/src/TestClass.cpp.o.d
+build CMakeFiles/Basic_Test.dir/src/CSequenceAligner.cpp.o: CXX_COMPILER__Basic_Test_Debug /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/src/CSequenceAligner.cpp || cmake_object_order_depends_target_Basic_Test
+  DEP_FILE = CMakeFiles/Basic_Test.dir/src/CSequenceAligner.cpp.o.d
   FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14
   INCLUDES = -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/. -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/./src
-  OBJECT_DIR = CMakeFiles/Test_Class.dir
-  OBJECT_FILE_DIR = CMakeFiles/Test_Class.dir/src
+  OBJECT_DIR = CMakeFiles/Basic_Test.dir
+  OBJECT_FILE_DIR = CMakeFiles/Basic_Test.dir/src
+
+build CMakeFiles/Basic_Test.dir/src/CUtils.cpp.o: CXX_COMPILER__Basic_Test_Debug /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/src/CUtils.cpp || cmake_object_order_depends_target_Basic_Test
+  DEP_FILE = CMakeFiles/Basic_Test.dir/src/CUtils.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++14
+  INCLUDES = -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/. -I/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/./src
+  OBJECT_DIR = CMakeFiles/Basic_Test.dir
+  OBJECT_FILE_DIR = CMakeFiles/Basic_Test.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Test_Class
+# Link build statements for EXECUTABLE target Basic_Test
 
 
 #############################################
-# Link the executable Test_Class
+# Link the executable Basic_Test
 
-build Test_Class: CXX_EXECUTABLE_LINKER__Test_Class_Debug CMakeFiles/Test_Class.dir/src/main.cpp.o CMakeFiles/Test_Class.dir/src/TestClass.cpp.o
+build Basic_Test: CXX_EXECUTABLE_LINKER__Basic_Test_Debug CMakeFiles/Basic_Test.dir/src/basic.cpp.o CMakeFiles/Basic_Test.dir/src/CSequenceAligner.cpp.o CMakeFiles/Basic_Test.dir/src/CUtils.cpp.o
   FLAGS = -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
-  OBJECT_DIR = CMakeFiles/Test_Class.dir
+  OBJECT_DIR = CMakeFiles/Basic_Test.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Test_Class
-  TARGET_PDB = Test_Class.dbg
+  TARGET_FILE = Basic_Test
+  TARGET_PDB = Basic_Test.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.23.2/bin/ccmake -S/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj -B/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -110,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/cmake-build-debug
 
-build all: phony Test_Class
+build all: phony Basic_Test
 
 # =============================================================================
 # Built-in targets

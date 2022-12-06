@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "csci570_finalProj",
+					"name" : "CSCI-570-FinalProject-Sequence-Alignment",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Test_Class::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Test_Class-Debug-5d6e2e7c4726bd53882d.json",
-					"name" : "Test_Class",
+					"id" : "Basic_Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Basic_Test-Debug-72d6a5deefc2f1c546c2.json",
+					"name" : "Basic_Test",
 					"projectIndex" : 0
 				}
 			]

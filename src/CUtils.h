@@ -13,6 +13,8 @@
 class CUtils {
 public:
     static bool IsStringNum(std::string strInput);
+
+    static std::string RemoveSpecialChar(std::string strInput);
 };
 
 

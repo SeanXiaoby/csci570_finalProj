@@ -15,12 +15,17 @@
 #include <cassert>
 #include "CUtils.h"
 
+#define GAP_PENALTY 30
+
+enum enumMove {
+    Diag, Left, Up
+};
 
 class CSequenceAligner {
 public:
-    CSequenceAligner(){};     // default constructor
-    CSequenceAligner(std::string strInputPath, std::string strOutputPath);
-    ~CSequenceAligner(){};    // default destructor
+    CSequenceAligner();     // default constructor
+    CSequenceAligner(std::string strInputPath, std::string strOutputPath);  // Parametered constructor
+    ~CSequenceAligner() {};    // default destructor
 
 
     // Read Txt file and save it to the member strings
@@ -30,18 +35,39 @@ public:
     void WriteTxtFiles(std::string path, std::string output);
 
     // Get member sequences
-    void GetSequences(std::string &strSeq1, std::string &strSeq2){
-        strSeq1 = m_strSequence1;
-        strSeq2 = m_strSequence2;}
+    void GetSequences(std::string &strSeq1, std::string &strSeq2);
+
+    // Do the basic Sequence Alignment
+    int DoBasicAlignment();
+
+    // Do the Memory efficient Sequence Alignment
+    int DoEfficientAlignment();
+
+    // Print the DP matrix
+    void PrintDP();
 
 private:
-    // Get delta of error scores for two nitrogenous bases
-    int GetDeltaScores(char cInput1, char cInput2);
+    // Get alpha of error scores for two nitrogenous bases
+    int GetAlphaScores(char cInput1, char cInput2);
+
+    // Get Gap penalty
+    int GetGapPenalty() {
+        return GAP_PENALTY;
+    }
 
 
 private:
     std::string m_strSequence1;
     std::string m_strSequence2;
+
+    std::vector<std::vector<int> > m_vDP;
+    std::vector<std::vector<enumMove> > m_vTrace;
+
+    int m_nTotalCost;
+    std::string m_strAlign1;
+    std::string m_strAlign2;
+
+    bool m_bIsAligned;
 
 
 };

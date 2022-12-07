@@ -9,19 +9,25 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]){
-    if(argc != 3){
-        std::cout<<"Please type in the input path and the output path..."<<std::endl;
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        std::cout << "Please type in the input path and the output path..." << std::endl;
         return errno;
     }
 
     std::string strPath = std::string(argv[1]);
-    auto pSAobj = new CSequenceAligner(strPath, strPath);
+    auto pObjAligner = new CSequenceAligner(strPath, strPath);
+    pObjAligner->PrintSequences(50);
 
-    cout<< "Final cost is: "<<pSAobj->DoBasicAlignment()<<endl<<endl;
+    auto nCost = pObjAligner->DoBasicAlignment();
 
-    delete pSAobj;
-    pSAobj = nullptr;
+    pObjAligner->PrintAlignments(50);
+    pObjAligner->ValidateAlignment();
+
+    cout << "Final cost is: " << nCost << endl << endl;
+
+    delete pObjAligner;
+    pObjAligner = nullptr;
 
     return 0;
 }

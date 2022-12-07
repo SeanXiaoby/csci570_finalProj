@@ -16,6 +16,7 @@
 #include "CUtils.h"
 
 #define GAP_PENALTY 30
+#define GAP_CHAR '_'
 
 enum enumMove {
     Diag, Left, Up
@@ -37,6 +38,9 @@ public:
     // Get member sequences
     void GetSequences(std::string &strSeq1, std::string &strSeq2);
 
+    // Get member sequences
+    void GetAlignments(std::string &strAlign1, std::string &strAlign2);
+
     // Do the basic Sequence Alignment
     int DoBasicAlignment();
 
@@ -46,6 +50,15 @@ public:
     // Print the DP matrix
     void PrintDP();
 
+    // Validate two alignments and get total cost
+    int ValidateAlignment(std::string strAlign1 = "", std::string strAlign2 = "");
+
+    // Print Sequences
+    void PrintSequences(int nMaxLength = 50);
+
+    // Print Alignment results
+    void PrintAlignments(int nMaxLength = 50);
+
 private:
     // Get alpha of error scores for two nitrogenous bases
     int GetAlphaScores(char cInput1, char cInput2);
@@ -54,6 +67,9 @@ private:
     int GetGapPenalty() {
         return GAP_PENALTY;
     }
+
+    // Generate Alignments from Trace matrix
+    void GenerateAlignments(std::string &str1, std::string &str2);
 
 
 private:

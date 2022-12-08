@@ -71,6 +71,9 @@ private:
     // Generate Alignments from Trace matrix
     void GenerateAlignments(std::string &str1, std::string &str2);
 
+    // Recursion helper function for Divide and conquer solution
+    void DChelper();
+
 
 private:
     std::string m_strSequence1;

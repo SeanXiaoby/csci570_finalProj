@@ -9,7 +9,7 @@ CSequenceAligner::CSequenceAligner() {
     m_strSequence2 = "";
     m_strAlign1 = "";
     m_strAlign2 = "";
-    m_bIsAligned = true;
+    m_bIsAligned = false;
     m_nTotalCost = 0;
 }
 
@@ -17,9 +17,6 @@ CSequenceAligner::CSequenceAligner() {
 CSequenceAligner::CSequenceAligner(std::string strInputPath, std::string strOutputPath) {
     ReadTxtFiles(strInputPath);
 
-    m_vDP = std::vector<std::vector<int> >(m_strSequence1.size() + 1, std::vector<int>(m_strSequence2.size() + 1, -1));
-    m_vTrace = std::vector<std::vector<enumMove> >(m_strSequence1.size() + 1,
-                                                   std::vector<enumMove>(m_strSequence2.size() + 1, Diag));
     m_bIsAligned = false;
     m_nTotalCost = 0;
 }
@@ -135,6 +132,9 @@ int CSequenceAligner::GetAlphaScores(char cInput1, char cInput2) {
 
 
 int CSequenceAligner::DoBasicAlignment() {
+    m_vDP = std::vector<std::vector<int> >(m_strSequence1.size() + 1, std::vector<int>(m_strSequence2.size() + 1, -1));
+    m_vTrace = std::vector<std::vector<enumMove> >(m_strSequence1.size() + 1,
+                                                   std::vector<enumMove>(m_strSequence2.size() + 1, Diag));
     // Initialization matrix
     for (int i = 0; i < m_strSequence1.size() + 1; ++i) {
         m_vDP[i][0] = i * GAP_PENALTY;

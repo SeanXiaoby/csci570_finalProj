@@ -1,17 +1,5 @@
 # ninja log v5
-0	952	6921236991292185	CMakeFiles/Basic_Test.dir/src/CSequenceAligner.cpp.obj	b128bd9addc4d343
 1171	1288	1670415736312690530	Basic_Test	ecdaf2c410d530ef
-5	395	6921236985736084	CMakeFiles/Basic_Test.dir/src/CUtils.cpp.obj	b83099314aa2793d
-1	134	6921674085357434	build.ninja	8560356a74e495d7
+1	134	1670498876453888187	build.ninja	8560356a74e495d7
 952	1171	6921236993467261	Basic_Test.exe	db7b0c9d02a9613b
-2	603	6921236987814498	CMakeFiles/Basic_Test.dir/src/basic.cpp.obj	5e62f9df6e7e4bc4
-5	660	6921674418240496	CMakeFiles/Basic-Test.dir/src/CUtils.cpp.obj	a77842f2e14308de
-3	666	6921674418295606	CMakeFiles/Basic-Test.dir/src/basic.cpp.obj	9dca04901a7e4cbb
-0	845	6921674420067655	CMakeFiles/Basic-Test.dir/src/CSequenceAligner.cpp.obj	df14b8b4ad1de40c
-846	1201	6921674423619271	Basic-Test.exe	bd89bb1c38f54f7c
-4	530	6921682258273482	CMakeFiles/Basic-Test.dir/src/basic.cpp.obj	9dca04901a7e4cbb
-7	817	6921682261140020	CMakeFiles/Basic-Test.dir/src/CSequenceAligner.cpp.obj	df14b8b4ad1de40c
-818	1012	6921682263072765	Basic-Test.exe	bd89bb1c38f54f7c
-8	611	6921682332211465	CMakeFiles/Basic-Test.dir/src/basic.cpp.obj	9dca04901a7e4cbb
-4	897	6921682335072333	CMakeFiles/Basic-Test.dir/src/CSequenceAligner.cpp.obj	df14b8b4ad1de40c
 897	1083	6921682336911465	Basic-Test.exe	bd89bb1c38f54f7c

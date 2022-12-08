@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Basic_Test"
+			"path" : "Basic-Test.exe"
+		},
+		{
+			"path" : "Basic-Test.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -48,7 +51,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk"
+					"fragment" : "-g"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -58,11 +61,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/."
+					"path" : "D:/Study/USC/Courses/CSCI570/csci570_finalProj/."
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/boyang/Documents/Courses/CSCI570/csci570_finalProj/./src"
+					"path" : "D:/Study/USC/Courses/CSCI570/csci570_finalProj/./src"
 				}
 			],
 			"language" : "CXX",
@@ -82,7 +85,7 @@
 			]
 		}
 	],
-	"id" : "Basic_Test::@6890427a1f51a3e7e1df",
+	"id" : "Basic-Test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -94,12 +97,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "Basic_Test",
-	"nameOnDisk" : "Basic_Test",
+	"name" : "Basic-Test",
+	"nameOnDisk" : "Basic-Test.exe",
 	"paths" : 
 	{
 		"build" : ".",

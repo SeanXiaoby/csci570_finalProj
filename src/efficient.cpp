@@ -1,5 +1,5 @@
 //
-// Created by Boyang Xiao on 12/5/22.
+// Created by Boyang Xiao on 2022/12/7.
 //
 
 #include <iostream>
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     auto pObjAligner = new CSequenceAligner(strPath, strPath);
     pObjAligner->PrintSequences(50);
 
-    auto nCost = pObjAligner->DoBasicAlignment();
+    auto nCost = pObjAligner->DoEfficientAlignment();
 
     pObjAligner->PrintAlignments(50);
 

@@ -79,7 +79,7 @@ void CSequenceAligner::ReadTxtFiles(std::string path) {
     m_strSequence2 = strSeq2;
 }
 
-void CSequenceAligner::WriteTxtFiles(std::string path, int nTotalTime, int nTotalMemory) {
+void CSequenceAligner::WriteTxtFiles(std::string path, double nTotalTime, double nTotalMemory) {
     std::ofstream outfile(path);
     outfile << m_nTotalCost << std::endl;
     outfile << m_strAlign1 << std::endl;
@@ -206,7 +206,7 @@ std::pair<std::string, std::string> CSequenceAligner::DChelper(std::string strSe
     auto vPrefix = ForwardAlignment(strSeq1, strSeq2.substr(0, nMidPoint));
     auto vSuffix = BackwardAlignment(strSeq1, strSeq2.substr(nMidPoint, std::string::npos));
 
-    int nBestQ = 0, nBestCost = INT_MAX;
+    int nBestQ = 0, nBestCost = INT32_MAX;
 
     for (int i = 0; i < vPrefix.size(); ++i) {
         if (vPrefix[i] + vSuffix[strSeq1.size() - i] <= nBestCost) {

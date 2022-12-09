@@ -33,7 +33,7 @@ public:
     void ReadTxtFiles(std::string path);
 
     // Write strings to the txt file
-    void WriteTxtFiles(std::string path, int nTotalTime = -1, int nTotalMemory = -1);
+    void WriteTxtFiles(std::string path, double nTotalTime = -1, double nTotalMemory = -1);
 
     // Get member sequences
     void GetSequences(std::string &strSeq1, std::string &strSeq2);

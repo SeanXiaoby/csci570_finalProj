@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
     struct timeval begin, end;
     gettimeofday(&begin, 0);
 
-    auto nCost = pObjAligner->DoBasicAlignment();
+    auto nCost = pObjAligner->DoEfficientAlignment();
 
     double totalmemory = getTotalMemory();
     gettimeofday(&end, 0);
@@ -55,16 +55,19 @@ int main(int argc, char *argv[]) {
     long microseconds = end.tv_usec - begin.tv_usec; 
     double totaltime = seconds*1000 + microseconds*1e-3; 
 
-    // ****************My solution and evaluations ends********** //
-
     pObjAligner->PrintAlignments(50);
     cout << "Final cost is: " << nCost << endl << endl;
+
+    // ****************My solution and evaluations ends********** //
 
     std::string strOutPath = std::string(argv[2]);
     pObjAligner->WriteTxtFiles(strOutPath, totaltime, totalmemory);
 
+
     printf("Total time:  %f\n", totaltime); 
     printf("Total memory:%f\n", totalmemory);
+
+
 
     delete pObjAligner;
     pObjAligner = nullptr;

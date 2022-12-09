@@ -27,6 +27,9 @@ int main(int argc, char *argv[]) {
 
     pObjAligner->ValidateAlignment();
 
+    std::string strOutPath = std::string(argv[2]);
+    pObjAligner->WriteTxtFiles(strOutPath);
+
     delete pObjAligner;
     pObjAligner = nullptr;
 

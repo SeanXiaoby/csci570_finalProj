@@ -25,7 +25,8 @@ int main(int argc, char *argv[]) {
 
     cout << "Final cost is: " << nCost << endl << endl;
 
-    pObjAligner->ValidateAlignment();
+    std::string strOutPath = std::string(argv[2]);
+    pObjAligner->WriteTxtFiles(strOutPath);
 
     delete pObjAligner;
     pObjAligner = nullptr;

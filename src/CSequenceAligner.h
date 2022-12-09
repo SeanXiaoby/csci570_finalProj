@@ -33,7 +33,7 @@ public:
     void ReadTxtFiles(std::string path);
 
     // Write strings to the txt file
-    void WriteTxtFiles(std::string path, std::string output);
+    void WriteTxtFiles(std::string path, int nTotalTime = -1, int nTotalMemory = -1);
 
     // Get member sequences
     void GetSequences(std::string &strSeq1, std::string &strSeq2);
@@ -47,9 +47,6 @@ public:
     // Do the Memory efficient Sequence Alignment
     int DoEfficientAlignment();
 
-    // Print the DP matrix
-    void PrintDP();
-
     // Validate two alignments and get total cost
     int ValidateAlignment(std::string strAlign1 = "", std::string strAlign2 = "");
 
@@ -59,7 +56,7 @@ public:
     // Print Alignment results
     void PrintAlignments(int nMaxLength = 50);
 
-private:
+public:
     // Get alpha of error scores for two nitrogenous bases
     int GetAlphaScores(char cInput1, char cInput2);
 
@@ -69,25 +66,38 @@ private:
     }
 
     // Generate Alignments from Trace matrix
-    void GenerateAlignments(std::string &str1, std::string &str2);
+    void GenerateAlignments(std::string &str1, std::string &str2, std::vector<std::vector<enumMove> > vTrace);
+
+    // Print the DP matrix
+    void PrintDP(std::vector<std::vector<int> > vDP);
+
+    // Print the Trace matrix
+    void PrintTrace(std::vector<std::vector<enumMove> > vDP);
 
     // Recursion helper function for Divide and conquer solution
-    void DChelper();
+    std::pair<std::string, std::string> DChelper(std::string strSeq1, std::string strSeq2);
+
+    // Standard alignment for DC solution
+    std::pair<std::string, std::string> StandardAlignment(std::string strSeq1, std::string strSeq2);
+
+    // Forward linear space alignment for DC
+    std::vector<int> ForwardAlignment(std::string strSeq1, std::string strSeq2);
+
+    // Backward linear space alignment for DC
+    std::vector<int> BackwardAlignment(std::string strSeq1, std::string strSeq2);
+
+    // Calculate whole cost
+    int CalculateCost(std::string strAlign1, std::string strAlign2);
 
 
-private:
+public:
     std::string m_strSequence1;
     std::string m_strSequence2;
 
-    std::vector<std::vector<int> > m_vDP;
-    std::vector<std::vector<enumMove> > m_vTrace;
-
     int m_nTotalCost;
+
     std::string m_strAlign1;
     std::string m_strAlign2;
-
-    bool m_bIsAligned;
-
 
 };
 
